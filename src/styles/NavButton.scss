@@ -1,0 +1,31 @@
+
+.nav-button {
+    position: relative;
+    padding: 10px 20px;
+    background: none; /* initial background color */
+    color: #eed6a2; /* initial text color */
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    transition: background 0.5s;
+    z-index: 1;
+  }
+  
+  .nav-button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border: none; /* Set the border color and thickness for the effect */
+    transition: all 0.5s;
+    z-index: -1;
+  }
+  
+  .nav-button.hovered::before {
+    width: 100%;
+    border: 1px solid #eed6a2; /* Set the border color and thickness for the effect */
+  }
+
+  

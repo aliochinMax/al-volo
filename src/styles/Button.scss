@@ -1,5 +1,5 @@
 
-button {
+.button {
   position: relative;
   padding: 10px 20px;
   background: none; /* initial background color */
@@ -11,7 +11,7 @@ button {
   z-index: 1;
 }
 
-button::before {
+.button::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -24,11 +24,11 @@ button::before {
   z-index: -1;
 }
 
-button.hovered::before {
+.button.hovered::before {
   height: 100%;
 }
 
-button.hovered {
+.button.hovered {
   transition: all 1s ease-in-out;
   color: #000;
 }
