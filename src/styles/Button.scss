@@ -1,0 +1,34 @@
+
+button {
+  position: relative;
+  padding: 10px 20px;
+  background: none; /* initial background color */
+  color: #eed6a2; /* initial text color */
+  cursor: pointer;
+  border: 1px solid #eed6a2;
+  text-transform: uppercase;
+  transition: background 0.5s;
+  z-index: 1;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #eed6a2; /* background color for the effect */
+  transition: height 0.5s;
+  transform-origin: bottom;
+  z-index: -1;
+}
+
+button.hovered::before {
+  height: 100%;
+}
+
+button.hovered {
+  transition: all 1s ease-in-out;
+  color: #000;
+}
